@@ -2,6 +2,7 @@ import Header from './components/Header'
 import ListaLabs from './components/ListaLabs'
 import UfrjLogo from './assets/ufrj.png'
 import ICLogo from './assets/iclogo.png'
+import Ementa from './components/Ementa'
 
 export default function App() {
   return (
@@ -43,12 +44,17 @@ export default function App() {
           </div>
         </section>
 
-        <section className="container mx-auto px-6 pb-12 py-10 gap-6">
+        <section id="laboratorios" className="container mx-auto px-6 pb-12 py-10 gap-6">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
             Laboratórios
           </h2>
+          <p className="text-gray-600 mt-1">
+                        Nesta seção estão listados os laboratórios desenvolvidos durante o semestre.
+                    </p>
           <ListaLabs />
         </section>
+
+        <Ementa />
       </main>
 
       <footer className="p-4 bg-white text-center text-sm text-gray-500 border-t">

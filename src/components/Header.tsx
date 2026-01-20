@@ -14,7 +14,7 @@ const Header: React.FC = () => {
     }
 
     return (
-        <header className="relative flex justify-between items-center px-8 py-4 bg-(--bg-header) text-(--white) shadow-md font-sans focus-within:[&_.mobile-menu]:flex">
+        <header className="relative flex justify-between items-center px-8 py-4 bg-(--bg-header) text-(--white) shadow-md font-sans">
             <div className="text-2xl font-bold">
                 Laboratórios de Álgebra Linear Algoritmica
             </div>
@@ -26,12 +26,9 @@ const Header: React.FC = () => {
                         </a>
                     </li>
                     <li>
-                        <button
-                            onClick={handleSobreClick}
-                            className="text-(--white) hover:text-blue-300 font-semibold transition-colors cursor-pointer"
-                        >
+                        <a href="#ementa" className="text-(--white) hover:text-blue-300 font-semibold transition-colors">
                             Ementa
-                        </button>
+                        </a>
                     </li>
                     <li>
                         <button
@@ -53,7 +50,7 @@ const Header: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
             </button>
-            <div className="mobile-menu hidden md:hidden absolute top-full left-0 w-full flex-col gap-4 bg-(--bg-header) shadow-lg px-6 py-4">
+            <div className="md:hidden mobile-menu hidden absolute top-full left-0 w-full flex-col gap-4 bg-(--bg-header) shadow-lg px-6 py-4">
                 <a href="#laboratorios"
                     className="text-(--white) font-semibold mr-auto ml-2 text-md py-2 rounded" transition-colors>
                     Laboratórios
