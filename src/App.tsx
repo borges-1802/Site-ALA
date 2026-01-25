@@ -3,6 +3,7 @@ import ListaLabs from './components/ListaLabs'
 import UfrjLogo from './assets/ufrj.png'
 import ICLogo from './assets/iclogo.png'
 import Ementa from './components/Ementa'
+import Sobre from './components/About'
 
 export default function App() {
   return (
@@ -11,16 +12,15 @@ export default function App() {
       <main className="flex-1">
         <section className="bg-white border-b">
           <div className="container mx-auto px-6 py-12">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="grid md:grid-cols-2 gap-2 items-center">
               <div className="justify-self-start">
                 <h1 className="text-4xl font-bold text-gray-800 mb-4">
                   ICP115 - Álgebra Linear Algorítmica
                 </h1>
                 <p className="text-gray-600 text-lg max-w-2xl">
-                  Esta página reúne os laboratórios, implementações e materiais
-                  desenvolvidos na disciplina Álgebra Linear Algorítmica do
-                  Instituto de Computação da UFRJ no período 2025.2 e serve como
-                  relatório da aplicação da disciplina no período.
+                   
+                  Esta página reúne os laboratórios, implementações e materiais desenvolvidos na disciplina Álgebra Linear Algorítmica do Instituto de Computação da UFRJ no período 2025.2 e serve como relatório da aplicação da disciplina no período.
+
                 </p>
               </div>
 
@@ -45,20 +45,22 @@ export default function App() {
         </section>
 
         <section id="laboratorios" className="container mx-auto px-6 pb-12 py-10 gap-6">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+          <h2 className="text-2xl font-bold text-gray-800 mb-2">
             Laboratórios
           </h2>
-          <p className="text-gray-600 mt-1">
-                        Nesta seção estão listados os laboratórios desenvolvidos durante o semestre.
+          <p className="text-gray-600 mt-1 mb-2">
+                        Nesta seção estão listados os laboratórios desenvolvidos durante o semestre, com a participação dos monitores João Victor Borges, Kauã Melo e Yuri Castro, além de laboratórios previamente criados por professores que contribuíram para o material, como os professores Laura Moraes e João Paixão.
                     </p>
           <ListaLabs />
         </section>
 
         <Ementa />
+
+        <Sobre/>
       </main>
 
       <footer className="p-4 bg-white text-center text-sm text-gray-500 border-t">
-        © 2026 — Instituto de Computação — UFRJ
+        © 2026 - Instituto de Computação - UFRJ
       </footer>
     </div>
   )

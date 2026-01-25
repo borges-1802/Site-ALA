@@ -1,11 +1,6 @@
 import React from 'react';
 
 const Header: React.FC = () => {
-    const handleSobreClick = (e: React.MouseEvent) => {
-        e.preventDefault();
-        alert("Site em desenvolvimento. Em breve mais novidades!");
-    };
-
     function toggleSmallMenu() {
         const element = document.getElementById('small-menu');
         if (element) {
@@ -31,12 +26,9 @@ const Header: React.FC = () => {
                         </a>
                     </li>
                     <li>
-                        <button
-                            onClick={handleSobreClick}
-                            className="text-(--white) hover:text-blue-300 font-semibold transition-colors cursor-pointer"
-                        >
+                        <a href="#sobre" className="text-(--white) hover:text-blue-300 font-semibold transition-colors">
                             Sobre
-                        </button>
+                        </a>
                     </li>
                     <li>
                         <a href="https://ic.ufrj.br/" className="text-(--white) hover:text-blue-300 font-semibold transition-colors">
@@ -50,7 +42,7 @@ const Header: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
             </button>
-            <div className="md:hidden mobile-menu hidden absolute top-full left-0 w-full flex-col gap-4 bg-(--bg-header) shadow-lg px-6 py-4">
+            <div id='small-menu' className="md:hidden mobile-menu hidden absolute top-full left-0 w-full flex flex-col gap-4 bg-(--bg-header) shadow-lg px-6 py-4">
                 <a href="#laboratorios"
                     className="text-(--white) font-semibold mr-auto ml-2 text-md py-2 rounded" transition-colors>
                     Laboratórios

@@ -23,52 +23,59 @@ export default function Ementa() {
                     </p>
 
                     {/* ITEM */}
-                    <div className="bg-white rounded-xl p-6 shadow-sm border space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="bg-white rounded-xl p-6 shadow-sm border space-y-6">
 
-                        <div className="flex gap-4 items-start">
-                            <h3 className="text-lg font-semibold text-gray-800">
-                                Álgebra Linear no Espaço Bidimensional
-                            </h3>
+                            <div className="flex gap-4 items-start">
+                                <h3 className="text-lg font-semibold text-gray-800">
+                                    Álgebra Linear no Espaço Bidimensional
+                                </h3>
+                            </div>
+
+                            <div className="flex justify-center">
+                                <Tabela
+                                    headers={["Semana", "Conteúdo"]}
+                                    rows={[
+                                        ["Semana 01", "Apresentação do Curso e Ferramentas"],
+                                        ["Semana 02", "Vetores e Produto Escalar"],
+                                        ["Semana 03", "Matrizes e Transformações Lineares"],
+                                        ["Semana 04", "Operadores, Composição Matricial, Determinantes"],
+                                        ["Semana 05", "Autovalores e Autovetores"],
+                                        ["Semana 06", "Operações de Matrizes e Aplicações"],
+                                        ["Semana 07", "Aplicações de Álgebra Linear no Plano"],
+                                    ]}
+                                />
+                            </div>
                         </div>
 
-                        <div className="flex justify-center">
-                            <Tabela
-                                headers={["Semana", "Conteúdo"]}
-                                rows={[
-                                    ["Semana 01", "Apresentação do Curso e Ferramentas"],
-                                    ["Semana 02", "Vetores e Produto Escalar"],
-                                    ["Semana 03", "Matrizes e Transformações Lineares"],
-                                    ["Semana 04", "Operadores, Composição Matricial, Determinantes"],
-                                    ["Semana 05", "Autovalores e Autovetores"],
-                                    ["Semana 06", "Operações de Matrizes e Aplicações"],
-                                    ["Semana 07", "Aplicações de Álgebra Linear no Plano"],
-                                ]}
-                            />
+                        <div className="bg-white rounded-xl p-6 shadow-sm border space-y-6">
+
+                            <div className="flex gap-4 items-start">
+                                <h3 className="text-lg font-semibold text-gray-800">
+                                    Álgebra Linear no ℝⁿ
+                                </h3>
+                            </div>
+
+                            <div className="flex justify-center">
+                                <Tabela
+                                    headers={["Semana", "Conteúdo"]}
+                                    rows={[
+                                        ["Semana 10", "Sistema Linear e Sistema Triangular"],
+                                        ["Semana 11", "Matriz Elementar e Eliminação Gaussiana"],
+                                        ["Semana 12", "Matriz Elementar, Eliminação Gaussiana e A = LU"],
+                                        ["Semana 13", "Determinante e Inversa de Matrizes"],
+                                        ["Semana 14", "Subespaço, Base e Ortogonalização (Gram-Schmidt)"],
+                                        ["Semana 15", "Gram-Schmidt e Transformações Lineares"],
+                                        ["Semana 16", "Transformações Lineares e Revisão"],
+                                    ]}
+                                />
+                            </div>
                         </div>
                     </div>
-
-                    <div className="bg-white rounded-xl p-6 shadow-sm border space-y-6">
-
-                        <div className="flex gap-4 items-start">
-                            <h3 className="text-lg font-semibold text-gray-800">
-                                Álgebra Linear no ℝⁿ
-                            </h3>
-                        </div>
-
-                        <div className="flex justify-center">
-                            <Tabela
-                                headers={["Semana", "Conteúdo"]}
-                                rows={[
-                                    ["Semana 10", "Sistema Linear e Sistema Triangular"],
-                                    ["Semana 11", "Matriz Elementar e Eliminação Gaussiana"],
-                                    ["Semana 12", "Matriz Elementar, Eliminação Gaussiana e A = LU"],
-                                    ["Semana 13", "Determinante e Inversa de Matrizes"],
-                                    ["Semana 14", "Subespaço, Base e Ortogonalização (Gram-Schmidt)"],
-                                    ["Semana 15", "Gram-Schmidt e Transformações Lineares"],
-                                    ["Semana 16", "Transformações Lineares e Revisão"],
-                                ]}
-                            />
-                        </div>
+                    <div>
+                        <p className="text-(--bg-header) text-lg font-semibold mb-4">
+                            O material foi baseado na apostila do curso de Álgebra Linear do professor do MIT, G. Strang, e na apostila do professor Severino Collier, que pode ser encontrada no link: <a href="https://ic.ufrj.br/~collier/index.html" className="text-blue-600 underline">Site do Collier</a>
+                        </p>
                     </div>
                 </div>
             </div>
