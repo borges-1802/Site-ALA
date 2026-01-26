@@ -59,7 +59,6 @@ export default function LabsList() {
           key={index}
           title={lab.title}
           description={lab.description}
-          image={typeof lab.image === "string" ? lab.image : ""}
           link={lab.link}
         />
       ))}
