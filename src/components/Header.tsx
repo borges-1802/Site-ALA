@@ -11,7 +11,7 @@ const Header: React.FC = () => {
     return (
         <header className="relative flex justify-between items-center px-8 py-4 bg-(--bg-header) text-(--white) shadow-md font-sans">
             <div className="text-2xl font-bold">
-                Laboratórios de Álgebra Linear Algoritmica
+                Álgebra Linear Algoritmica
             </div>
             <nav className='hidden md:flex gap-6'>
                 <ul className="flex gap-5 list-none">
