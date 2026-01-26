@@ -26,9 +26,9 @@ export default function ContatosEquipe() {
     {
       nome: "Kauã Melo",
       cargo: "Monitor",
-      email: "kauajlm@ic.ufrj.br",
+      email: "kauamelo@ic.ufrj.br",
       linkedin: false,
-      lattes: false,
+      lattes: "http://lattes.cnpq.br/4383561860883564",
     },
     {
       nome: "Lucas Noblat",
