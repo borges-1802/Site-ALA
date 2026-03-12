@@ -9,45 +9,38 @@ const labs = [
   },
   {
     title: "Vetor Diretor",
-    description: "Introdução ao conceito de vetor diretor utilizando o Colab.",
+    description: "Não disponível.",
     image: false,
-    link: "https://drive.google.com/drive/folders/1fslfXjXfsggQLMiLwYtv2NZdwLQd4Syo?usp=sharing"
   },
   {
     title: "Laboratório de Autocoisas",
-    description: "Estudo de autovalores e autovetores com conceitos de Transformações Lineares. Feito por: Juliana Valério.",
+    description: "Não disponível.",
     image: false,
-    link: "https://drive.google.com/drive/folders/1UnvjvpY7ywrtLMn8A-sw3EHUx62qg34j?usp=sharing"
   },
   {
     title: "Laboratório de Vibrações",
-    description: "Entender propriedades de autocoisas do sistema físico de forma matricial e manipular matematicamente. Feito por: Kauã Melo.",
+      description: "Não disponível.",
     image: false,
-    link: "https://drive.google.com/drive/folders/1DvaIiCLeikuZNG6VVZ2inVUSoop_WDSN?usp=sharing"
   },
   {
     title: "A Cifra de Hill e o Algoritmo de Gauss-Jordan",
-    description: "Entender propriedades de autocoisas do sistema de forma matricial e manipular utilizando física. Feito por: Kauã Melo.",
+    description: "Não disponível.",
     image: false,
-    link: "https://drive.google.com/drive/folders/1BnPn9ddukA0s2EAdLvb94AvhPzLuC2nJ?usp=sharing"
   },
   {
     title: "Laboratório de Tranformações Lineares em 2D",
-    description: "Interagir com as transformações lineares através de animações no colab.",
+    description: "Não disponível.",
     image: false,
-    link: "https://drive.google.com/drive/folders/19iFaa4zjA3fOOo1eu65FQuLBvBryXfU_?usp=sharing"
   },
   {
     title: "Laboratório de QR e Sinais Ortogonais",
-    description: "Estudo da aplicação do algoritmo de Gram-Schmidt modificado, com interpretação de vetores ortogonais. Feito por: Yuri Castro (Desenvolvido após o período da disciplina).",
+    description: "Não disponível.",
     image: false,
-    link: "https://drive.google.com/drive/folders/11qWVoj2WZSV6PUvdRK6EGVmycP1XAttK?usp=sharing"
   },
   {
     title: "Laboratório de Tranformações Lineares no ℝⁿ",
-    description: "Aplicação de Transformações Lineares em espaços n-dimensionais utilizando o Colab. Feito por: João Victor Borges.",
+    description: "Não disponível.",
     image: false,
-    link: "https://drive.google.com/drive/folders/1N_tjtTDtT8V5L83Bj7hzbbir7653a2Px?usp=sharing"
   }
 ];
 
