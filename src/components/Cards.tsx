@@ -9,7 +9,7 @@ interface LabCardProps {
 
 const Cards: React.FC<LabCardProps> = ({ title, description, /*image,*/ link, disabled }) => {
     return (
-        <div className={`flex flex-col md:flex-row items-center gap-6 p-6 rounded-lg transition-all border 
+        <div className={`flex flex-col md:flex-row items-start gap-6 p-6 rounded-lg transition-all border 
             ${disabled
                     ? "bg-[#1a1a1a] border-gray-800 cursor-not-allowed opacity-60"
                     : "bg-[#222222] border-transparent hover:border-gray-600 cursor-pointer"

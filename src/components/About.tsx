@@ -1,4 +1,3 @@
-import { Grid } from "lucide-react";
 import GridEquipe from "./AboutList";
 
 export default function Sobre() {
