@@ -9,38 +9,39 @@ const labs = [
   },
   {
     title: "Vetor Diretor",
-    description: "Não disponível.",
+    description: "O objetivo é explorar a relação entre a equação vetorial e cartesiana, além de como o produto escalar ajuda a interpretar a reta como um conjunto de pontos que seguem uma mesma condição geométrica.",
     image: false,
+    link: "https://colab.research.google.com/drive/1KSnxepNhL33d2wxXCCbDarNCKF8mAAgd?usp=sharing"
   },
   {
     title: "Laboratório de Autocoisas",
-    description: "Não disponível.",
     image: false,
+    disabled: true
   },
   {
     title: "Laboratório de Vibrações",
-      description: "Não disponível.",
     image: false,
+    disabled: true
   },
   {
     title: "A Cifra de Hill e o Algoritmo de Gauss-Jordan",
-    description: "Não disponível.",
     image: false,
+    disabled: true
   },
   {
     title: "Laboratório de Tranformações Lineares em 2D",
-    description: "Não disponível.",
     image: false,
+    disabled: true
   },
   {
     title: "Laboratório de QR e Sinais Ortogonais",
-    description: "Não disponível.",
     image: false,
+    disabled: true
   },
   {
     title: "Laboratório de Tranformações Lineares no ℝⁿ",
-    description: "Não disponível.",
     image: false,
+    disabled: true
   }
 ];
 
@@ -53,6 +54,7 @@ export default function LabsList() {
           title={lab.title}
           description={lab.description}
           link={lab.link}
+          disabled={lab.disabled}
         />
       ))}
     </div>

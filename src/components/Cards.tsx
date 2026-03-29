@@ -1,14 +1,19 @@
 import React from 'react';
 interface LabCardProps {
     title: string;
-    description: string;
+    description?: string;
     /*image: string;*/
     link?: string;
+    disabled?: boolean;
 }
 
-const Cards: React.FC<LabCardProps> = ({ title, description, /*image,*/ link }) => {
+const Cards: React.FC<LabCardProps> = ({ title, description, /*image,*/ link, disabled }) => {
     return (
-        <div className={`flex flex-col md:flex-row items-center gap-6 p-6 rounded-lg transition-all cursor-pointer border border-transparent hover:border-gray-600 bg-[#222222]`}>
+        <div className={`flex flex-col md:flex-row items-center gap-6 p-6 rounded-lg transition-all border 
+            ${disabled
+                    ? "bg-[#1a1a1a] border-gray-800 cursor-not-allowed opacity-60"
+                    : "bg-[#222222] border-transparent hover:border-gray-600 cursor-pointer"
+                }`}>
 
             {/*
             IMAGEM
@@ -32,6 +37,11 @@ const Cards: React.FC<LabCardProps> = ({ title, description, /*image,*/ link }) 
                         <span>📖</span>
                         <span>Ver Lab</span>
                     </a>
+                )}
+                {disabled && (
+                    <span className="text-gray-500 text-sm font-semibold">
+                        Indisponível
+                    </span>
                 )}
             </div>
         </div>
