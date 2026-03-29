@@ -1,4 +1,5 @@
-import AboutList from "./AboutList";
+import { Grid } from "lucide-react";
+import GridEquipe from "./AboutList";
 
 export default function Sobre() {
   return (
@@ -38,17 +39,7 @@ export default function Sobre() {
     
 
           {/* Equipe e colaborações */}
-          <div className="bg-white rounded-xl p-6 shadow-sm border space-y-4 lg:col-span-2">
-            <h3 className="text-lg font-semibold text-gray-800">
-              Equipe
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              Nossa equipe atual é composta pela professora e por cinco monitores da disciplina:
-            </p>
-
-            <AboutList />
-            
-          </div>
+<GridEquipe/>
 
           
         </div>

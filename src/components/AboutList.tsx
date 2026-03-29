@@ -1,7 +1,7 @@
 import { Mail, BookOpen, Linkedin } from "lucide-react";
 
 export default function ContatosEquipe() {
-  const equipe = [
+  const equipeAtual = [
     {
       nome: "Juliana Vianna Valério",
       cargo: "Professora",
@@ -10,9 +10,9 @@ export default function ContatosEquipe() {
       lattes: false,
     },
     {
-      nome: "Halisson Souza",
+      nome: "Gabriel Leão",
       cargo: "Monitor",
-      email: "halisonpqs@ic.ufrj.br",
+      email: "gabrielfl@ic.ufrj.br",
       linkedin: false,
       lattes: false,
     },
@@ -31,6 +31,44 @@ export default function ContatosEquipe() {
       lattes: "http://lattes.cnpq.br/4383561860883564",
     },
     {
+      nome: "Leonardo Lucena",
+      cargo: "Monitor",
+      email: "leonardolx@ic.ufrj.br",
+      linkedin: false,
+      lattes: false,
+    },
+    {
+      nome: "Luiz Camporês",
+      cargo: "Monitor",
+      email: "luizgcs@ic.ufrj.br",
+      linkedin: false,
+      lattes: false,
+    },
+    {
+      nome: "Luiz Conti",
+      cargo: "Monitor",
+      email: "luizafc@ic.ufrj.br",
+      linkedin: false,
+      lattes: false,
+    },
+    {
+      nome: "Thiago Ferraco",
+      cargo: "Monitor",
+      email: "thiagofa@ic.ufrj.br",
+      linkedin: false,
+      lattes: false,
+    }
+  ];
+
+  const equipeAnterior = [
+    {
+      nome: "Halisson Souza",
+      cargo: "Monitor",
+      email: "halisonpqs@ic.ufrj.br",
+      linkedin: false,
+      lattes: false,
+    },
+    {
       nome: "Lucas Noblat",
       cargo: "Monitor",
       email: "lucasan@ic.ufrj.br",
@@ -46,6 +84,7 @@ export default function ContatosEquipe() {
     }
   ];
 
+  function GridEquipe({ equipe }: { equipe: any[] }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {equipe.map((pessoa) => (
@@ -97,5 +136,22 @@ export default function ContatosEquipe() {
         </div>
       ))}
     </div>
-  );
+);
+}
+
+return (
+  <div className="bg-white rounded-xl p-6 shadow-sm border space-y-4 lg:col-span-2">
+            <h3 className="text-lg font-semibold text-gray-800">
+              Equipe
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              Nossa equipe atual é composta pela professora e por sete monitores da disciplina:
+            </p>
+            <GridEquipe equipe={equipeAtual} />
+            <p className="text-gray-600 leading-relaxed">
+              Além dos nossos monitores do 2025-2 que contribuíram com a disciplina:
+            </p>
+            <GridEquipe equipe={equipeAnterior} />
+          </div>
+)
 }

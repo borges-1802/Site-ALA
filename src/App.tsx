@@ -19,7 +19,7 @@ export default function App() {
                 </h1>
                 <p className="text-gray-600 text-lg max-w-2xl">
                    
-                  Esta página reúne os laboratórios, implementações e materiais desenvolvidos na disciplina Álgebra Linear Algorítmica do Instituto de Computação da UFRJ no período 2025.2 e serve como relatório da aplicação da disciplina no período.
+                  Esta página reúne os laboratórios, implementações e materiais desenvolvidos na disciplina Álgebra Linear Algorítmica do Instituto de Computação da UFRJ no período 2025.2 e 2026.1, e serve como relatório da aplicação da disciplina no período.
 
                 </p>
               </div>
