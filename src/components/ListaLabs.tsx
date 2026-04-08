@@ -14,6 +14,12 @@ const labs = [
     link: "https://colab.research.google.com/drive/1KSnxepNhL33d2wxXCCbDarNCKF8mAAgd?usp=sharing"
   },
   {
+    title: "Laboratório de Tranformações Lineares em 2D",
+    description: "Ao longo deste laboratório, vocês vão interagir com as transformações lineares através de animações. As tarefas serão baseadas na análise e intuição que tiverem ao verem as animações que vocês mesmo irão controlar.",
+    image: false,
+    link: "https://colab.research.google.com/drive/1TdCWWTyznx5cXPhNqXZbk75grRJDCK4n?usp=sharing"
+  },
+  {
     title: "Laboratório de Autocoisas",
     image: false,
     disabled: true
@@ -25,11 +31,6 @@ const labs = [
   },
   {
     title: "A Cifra de Hill e o Algoritmo de Gauss-Jordan",
-    image: false,
-    disabled: true
-  },
-  {
-    title: "Laboratório de Tranformações Lineares em 2D",
     image: false,
     disabled: true
   },
