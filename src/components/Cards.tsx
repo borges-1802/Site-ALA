@@ -15,9 +15,9 @@ const Cards: React.FC<LabCardProps> = ({ title, image, link, disabled = false, c
 
     if (disabled) {
         return (
-            <div className="flex flex-col items-center gap-6 p-6 rounded-lg border w-full bg-[#1a1a1a] border-gray-800 cursor-not-allowed opacity-60">
+            <div className="flex flex-col items-center gap-6 p-6 rounded-lg border w-full bg-linear-to-b from-[#243a51] to-[#000418] border-gray-800 cursor-not-allowed opacity-60">
                 <div className="">
-                <h3 className="text-xl font-semibold text-white mb-2 font-sans text-center">
+                <h3 className="text-xl font-semibold text-gray-400 mb-2 font-sans text-center">
                     {title ? title : "Laboratório Indisponível"}
                 </h3>
             </div>
@@ -33,7 +33,7 @@ const Cards: React.FC<LabCardProps> = ({ title, image, link, disabled = false, c
                 {/* Mensagem simples no lugar da lista de ícones */}
                 <div className="w-full flex justify-center items-center py-4">
                     <span className="text-gray-400 text-lg font-semibold">
-                        Laboratório Desabilitado
+                        Laboratório Indisponível
                     </span>
                 </div>
             </div>
