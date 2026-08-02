@@ -13,6 +13,9 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
+  
+
+  
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,6 +23,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@theme {
+
+  --color-primary: #495F8C;
+  --color-secondary: #2E4159;
+  --color-tertiary: #6883A6;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
