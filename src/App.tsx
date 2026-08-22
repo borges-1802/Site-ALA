@@ -19,7 +19,7 @@ export default function App() {
                 </h1>
                 <p className="text-gray-600 text-lg max-w-2xl">
                    
-                  Esta página reúne os laboratórios, implementações e materiais desenvolvidos na disciplina Álgebra Linear Algorítmica do Instituto de Computação da UFRJ no período 2025.2 e 2026.1, e serve como relatório da aplicação da disciplina no período.
+                  Esta página reúne os laboratórios, implementações e materiais desenvolvidos na disciplina Álgebra Linear Algorítmica do Instituto de Computação da UFRJ nos períodos 2025.2, 2026.1 e 2026.2, e serve como relatório da aplicação da disciplina no período.
 
                 </p>
               </div>
@@ -46,13 +46,12 @@ export default function App() {
 
         <section id="laboratorios" className="bg-slate-50 border-b border-gray-200 py-16">
           <div className="container mx-auto px-6">
-            {/* Header da Seção de Labs com largura limitada e destaque visual */}
             <div className="mb-12 max-w-3xl">
               <h2 className="text-3xl font-bold text-slate-900 mb-4 border-l-4 border-blue-600 pl-4">
                 Laboratórios Práticos
               </h2>
               <p className="text-slate-600 text-lg leading-relaxed">
-                Explore os roteiros e experimentos desenvolvidos para este semestre. Todo o material que você vê aqui foi construído colaborativamente, unindo a base criada pelos professores Laura Moraes e João Paixão com as novas implementações dos monitores João Victor Borges, Kauã Melo e Yuri Castro.
+                Nesta seção estão listados os laboratórios desenvolvidos durante o semestre, com a participação dos monitores João Victor Borges, Kauã Melo, Yuri Castro e Thiago Ferraço, além de laboratórios previamente criados por professores que contribuíram para o material, como os professores Laura Moraes e João Paixão.
               </p>
             </div>
             
