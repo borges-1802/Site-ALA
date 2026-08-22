@@ -55,8 +55,8 @@ export default function ContatosEquipe() {
       nome: "Thiago Ferraco",
       cargo: "Monitor",
       email: "thiagofa@ic.ufrj.br",
-      linkedin: false,
-      lattes: false,
+      linkedin: "www.linkedin.com/in/thiagoferraco",
+      lattes: "http://lattes.cnpq.br/6244649458797403",
     }
   ];
 
@@ -141,7 +141,7 @@ export default function ContatosEquipe() {
 
 return (
   <div className="bg-white rounded-xl p-6 shadow-sm border space-y-4 lg:col-span-2">
-            <h3 className="text-lg font-semibold text-gray-800">
+            <h3 className=" font-semibold text-slate-900 mb-4 border-l-4 border-black pl-4">
               Equipe
             </h3>
             <p className="text-gray-600 leading-relaxed">
