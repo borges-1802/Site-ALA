@@ -6,18 +6,23 @@ const labs = [
     image: "./src/assets/iclogo.png",
     createdBy: "Juliana Valério",
     plataform: "Scilab",
-    modifiedBy: "João Paixão",
-    link: "https://drive.google.com/drive/folders/18u_b4ZUAKPBiSvDPrq4Gj9j5z0Ntjw1_?usp=sharing",
+    link: "https://colab.research.google.com/drive/1k9iE4Og6jx-4MHp6aKWaXqOL7tJnU5iV?authuser=1",
     expectedTime: "1 hora e 30 minutos",
     subject: "Introdução à Álgebra Linear Algorítmica",
-    disabled: false
+    disabled: false,
+    difficulty: "facil",
   },
   {
+
     title: "Vetor Diretor",
-    description: "O objetivo é explorar a relação entre a equação vetorial e cartesiana, além de como o produto escalar ajuda a interpretar a reta como um conjunto de pontos que seguem uma mesma condição geométrica.",
-    //image: false,
-    link: "https://colab.research.google.com/drive/1KSnxepNhL33d2wxXCCbDarNCKF8mAAgd?usp=sharing"
-    
+    image: "./src/assets/iclogo.png",
+    createdBy: "Juliana Valério",
+    plataform: "Scilab",
+    link: "https://colab.research.google.com/drive/1KSnxepNhL33d2wxXCCbDarNCKF8mAAgd?usp=sharing",
+    expectedTime: "1 hora e 30 minutos",
+    subject: "Introdução à Álgebra Linear Algorítmica",
+    disabled: false,
+    difficulty: "facil",
   },
   {
     title: "Laboratório de Tranformações Lineares em 2D",
@@ -69,6 +74,7 @@ export default function LabsList() {
           plataform={lab.plataform}
           disabled={lab.disabled}
           expectedTime={lab.expectedTime}
+          difficulty={lab.difficulty}
         />
       ))}
     </div>
