@@ -44,14 +44,20 @@ export default function App() {
           </div>
         </section>
 
-        <section id="laboratorios" className="container mx-auto px-6 pb-12 py-10 gap-6">
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">
-            Laboratórios
-          </h2>
-          <p className="text-gray-600 mt-1 mb-2">
-                        Nesta seção estão listados os laboratórios desenvolvidos durante o semestre, com a participação dos monitores João Victor Borges, Kauã Melo e Yuri Castro, além de laboratórios previamente criados por professores que contribuíram para o material, como os professores Laura Moraes e João Paixão.
-                    </p>
-          <ListaLabs />
+        <section id="laboratorios" className="bg-slate-50 border-b border-gray-200 py-16">
+          <div className="container mx-auto px-6">
+            {/* Header da Seção de Labs com largura limitada e destaque visual */}
+            <div className="mb-12 max-w-3xl">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4 border-l-4 border-blue-600 pl-4">
+                Laboratórios Práticos
+              </h2>
+              <p className="text-slate-600 text-lg leading-relaxed">
+                Explore os roteiros e experimentos desenvolvidos para este semestre. Todo o material que você vê aqui foi construído colaborativamente, unindo a base criada pelos professores Laura Moraes e João Paixão com as novas implementações dos monitores João Victor Borges, Kauã Melo e Yuri Castro.
+              </p>
+            </div>
+            
+            <ListaLabs />
+          </div>
         </section>
 
         <Ementa />
