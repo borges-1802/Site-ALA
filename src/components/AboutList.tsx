@@ -55,7 +55,7 @@ export default function ContatosEquipe() {
       nome: "Thiago Ferraco",
       cargo: "Monitor",
       email: "thiagofa@ic.ufrj.br",
-      linkedin: "www.linkedin.com/in/thiagoferraco",
+      linkedin: "http://www.linkedin.com/in/thiagoferraco",
       lattes: "http://lattes.cnpq.br/6244649458797403",
     }
   ];
