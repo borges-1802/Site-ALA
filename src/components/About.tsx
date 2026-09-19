@@ -4,12 +4,14 @@ export default function Sobre() {
   return (
     <section id="sobre" className=" border-t">
       <div className="container mx-auto px-6 pb-12 py-10 gap-6">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">Sobre</h2>
+        <h2 className="text-3xl font-bold text-slate-900 mb-4 border-l-4 border-blue-600 pl-4">
+                Sobre
+              </h2>
 
         <div className="grid gap-6">
           {/* Proposta */}
           <div className="bg-white rounded-xl p-6 shadow-sm border lg:col-span-2 space-y-4">
-            <h3 className="text-lg font-semibold text-gray-800">
+            <h3 className=" font-semibold text-slate-900 mb-4 border-l-4 border-black pl-4">
               Proposta e objetivos da disciplina
             </h3>
             <p className="text-gray-600 leading-relaxed">

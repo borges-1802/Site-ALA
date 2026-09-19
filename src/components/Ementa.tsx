@@ -4,9 +4,9 @@ export default function Ementa() {
     return (
         <section id="ementa" className="bg-white border-t">
             <div className="container mx-auto px-6 pb-12 py-10 gap-6">
-                <h2 className="text-3xl font-bold text-gray-800 mb-10">
-                    Ementa
-                </h2>
+                <h2 className="text-3xl font-bold text-slate-900 mb-4 border-l-4 border-blue-600 pl-4">
+                Ementa
+              </h2>
 
                 {/* LISTA */}
                 <div className="space-y-6">
@@ -14,9 +14,9 @@ export default function Ementa() {
                     <p className="text-(--bg-header) text-lg font-semibold mb-4">
                         A Ementa original da disciplina ICP115 - Álgebra Linear Algorítmica no SIGA abrange:
                     </p>
-                    <p className="text-gray-600 mt-1">
-                        Vetores no plano, base e combinação linear. Transformações lineares e matrizes no plano. Autovalores e autovetores para operadores do plano. Diagonalização e mudança de variáveis em dimensão dois. Sistemas lineares e eliminação gaussiana. Rn e seus subespaços. Interseção, soma e complemento de subespaços. Dependência e independência linear. Base e coordenadas. Transformações lineares e matrizes. Mudança de base. Autovalores e autovetores e diagonalização de operadores.
-                    </p>
+                    <p className="text-slate-600 text-lg leading-relaxed">
+                Vetores no plano, base e combinação linear. Transformações lineares e matrizes no plano. Autovalores e autovetores para operadores do plano. Diagonalização e mudança de variáveis em dimensão dois. Sistemas lineares e eliminação gaussiana. Rn e seus subespaços. Interseção, soma e complemento de subespaços. Dependência e independência linear. Base e coordenadas. Transformações lineares e matrizes. Mudança de base. Autovalores e autovetores e diagonalização de operadores.
+              </p>
 
                     <p className="text-(--bg-header) text-lg font-semibold mb-4">
                         E o cronograma da disciplina para este semestre foi organizado em dois grandes tópicos:
