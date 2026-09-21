@@ -19,7 +19,7 @@ export default function Ementa() {
               </p>
 
                     <p className="text-(--bg-header) text-lg font-semibold mb-4">
-                        E o cronograma da disciplina para este semestre foi organizado em dois grandes tópicos:
+                        E o cronograma proposto para a disciplina foi organizado em dois grandes tópicos:
                     </p>
 
                     {/* ITEM */}
@@ -74,7 +74,7 @@ export default function Ementa() {
                     </div>
                     <div>
                         <p className="text-(--bg-header) text-lg font-semibold mb-4">
-                            O material foi baseado na apostila do curso de Álgebra Linear do professor do MIT, G. Strang, e na apostila do professor Severino Collier, que pode ser encontrada no link: <a href="https://ic.ufrj.br/~collier/index.html" className="text-blue-600 underline">Site do Collier</a>
+                            O material foi baseado na apostila do curso de Álgebra Linear do professor do MIT, G. Strang, e na apostila do professor Severino Collier Coutinho (S. C. Coutinho), que pode ser encontrada no link: <a href="https://ic.ufrj.br/~collier/index.html" className="text-blue-600 underline">Site do Collier</a>
                         </p>
                     </div>
                 </div>

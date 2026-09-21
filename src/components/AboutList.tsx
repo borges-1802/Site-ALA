@@ -149,7 +149,7 @@ return (
             </p>
             <GridEquipe equipe={equipeAtual} />
             <p className="text-gray-600 leading-relaxed">
-              Além dos nossos monitores do 2025-2 que contribuíram com a disciplina:
+              Além dos nossos monitores do 2025.2 que contribuíram com a disciplina:
             </p>
             <GridEquipe equipe={equipeAnterior} />
           </div>

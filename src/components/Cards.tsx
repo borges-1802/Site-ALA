@@ -1,133 +1,147 @@
 import React from 'react';
-interface LabCardProps {
+import { FileText, ExternalLink } from 'lucide-react';
+import { difficultyLabels, difficultyStyles } from './difficulty';
+import type { Difficulty } from './difficulty';
+import ICLogo from '../assets/iclogo.png';
+import DisabledIcon from '../assets/disabled.svg';
+import UserIcon from '../assets/user.svg';
+import UserModIcon from '../assets/userMod.svg';
+import CodeIcon from '../assets/code.svg';
+import NotebookIcon from '../assets/notebook.svg';
+import StopwatchIcon from '../assets/stopwatch.svg';
+
+export interface LabCardProps {
     title: string;
+    description?: string;
     image?: string;
     link?: string;
+    docsLink?: string;
     disabled?: boolean;
     plataform?: string;
     createdBy?: string;
     modifiedBy?: string;
     subject?: string;
     expectedTime?: string;
-    difficulty?: 'facil' | 'medio' | 'dificil';
+    difficulty?: Difficulty;
 }
 
-const difficultyStyles = {
-    facil: "bg-green-500/20 text-green-400 border-green-500/50",
-    medio: "bg-orange-500/20 text-orange-400 border-orange-500/50",
-    dificil: "bg-red-500/20 text-red-400 border-red-500/50"
-};
-
-const difficultyLabels = {
-    facil: "Fácil",
-    medio: "Médio",
-    dificil: "Difícil"
-};
-
-const Cards: React.FC<LabCardProps> = ({ 
-    title, image, link, disabled = false, createdBy, 
-    modifiedBy, plataform , subject, expectedTime, difficulty 
-}) => {
-
-    if (disabled) {
-        return (
-            <div className="flex flex-col items-center gap-6 p-6 rounded-lg border w-full bg-linear-to-b from-[#243a51] to-[#000418] border-gray-800 cursor-not-allowed opacity-60 relative">
-                
-                {/* Tag de Dificuldade no modo desabilitado */}
-                {difficulty && (
-                    <span className={`absolute top-4 right-4 px-3 py-1 text-xs font-bold rounded-full border ${difficultyStyles[difficulty]}`}>
-                        {difficultyLabels[difficulty]}
-                    </span>
-                )}
-
-                {/* Adicionado mt-6 para dar espaço para a tag */}
-                <div className="mt-6">
-                    <h3 className="text-xl font-semibold text-gray-400 mb-2 font-sans text-center">
-                        {title ? title : "Laboratório Indisponível"}
-                    </h3>
-                </div>
-
-                <div className="rounded-2xl flex-1 flex justify-center items-center">
-                    <img 
-                        src="src/assets/disabled.svg" 
-                        alt="Laboratório Desabilitado" 
-                        className="w-48 object-cover rounded-lg" 
-                    />
-                </div>
-                
-                <div className="w-full flex justify-center items-center py-4">
-                    <span className="text-gray-400 text-lg font-semibold">
-                        Laboratório Indisponível
-                    </span>
-                </div>
-            </div>
-        );
-    }
-
+function InfoRow({ icon, children }: { icon: React.ReactNode; children: React.ReactNode }) {
     return (
-        <a href={link} className={`flex flex-col items-center gap-6 p-6 rounded-lg transition-all border w-full relative
+        <div className="w-full flex items-center gap-2">
+            {icon}
+            <p className="text-base text-[#cbdefc88] font-bold">{children}</p>
+        </div>
+    );
+}
+
+function InfoIcon({ src, alt }: { src: string; alt: string }) {
+    return <img src={src} alt={alt} className="w-7.5 h-7.5 shrink-0" />;
+}
+
+const Cards: React.FC<LabCardProps> = ({
+    title, description, image, link, docsLink, disabled = false,
+    createdBy, modifiedBy, plataform, subject, expectedTime, difficulty
+}) => {
+    return (
+        <div className={`flex flex-col items-center gap-6 p-6 rounded-lg border w-full relative transition-all
             ${disabled
-                    ? "bg-[#1a1a1a] border-gray-800 cursor-not-allowed opacity-60"
-                    : "bg-linear-to-b from-primary to-secondary hover:border-gray-600 cursor-pointer"
-                }`}>
-            
-            {/* Tag de Dificuldade */}
+                ? "bg-linear-to-b from-[#243a51] to-[#000418] border-gray-800 opacity-60"
+                : "bg-linear-to-b from-primary to-secondary border-transparent hover:border-gray-600"
+            }`}>
+
             {difficulty && (
                 <span className={`absolute top-4 right-4 px-3 py-1 text-xs font-bold rounded-full border backdrop-blur-sm ${difficultyStyles[difficulty]}`}>
                     {difficultyLabels[difficulty]}
                 </span>
             )}
 
-            {/* Adicionado mt-6 para descolar o título do topo e evitar colisão com a tag */}
-            <div className="mt-6 w-full px-2 flex-1">
-                <h3 className="text-xl font-semibold text-white mb-2 font-sans text-center">
+            {disabled && (
+                <span className="absolute top-4 left-4 px-3 py-1 text-xs font-bold rounded-full border bg-slate-500/20 text-slate-300 border-slate-500/50">
+                    Em breve
+                </span>
+            )}
+
+            {/* mt-6 descola o título do topo e evita colisão com as tags */}
+            <div className="mt-6 w-full px-2">
+                <h3 className={`text-xl font-semibold mb-2 font-sans text-center ${disabled ? "text-gray-400" : "text-white"}`}>
                     {title}
                 </h3>
-            </div>
-                
-            {image
-            ? <img src={image} alt={title} className="w-48 object-cover rounded-lg" />
-            : <div className="rounded-2xl flex-1 flex justify-center items-center">
-                <img src="src/assets/iclogo.png" alt="Logo do Instituto de Computação" className="w-48 object-cover rounded-lg" />
-            </div>
-            }
-            
-            <div className="w-full flex flex-col gap-2">
-                <div className="w-full flex items-center gap-2">
-                    <img src="src/assets/user.svg" alt="user" className="w-[30px] h-[30px]" />
-                    <p className="text-xl text-[#cbdefc88] font-bold">
-                        {createdBy}
+                {description && (
+                    <p className="text-sm text-[#cbdefc88] text-center">
+                        {description}
                     </p>
-                </div>
-                {modifiedBy && (
-                    <div className="w-full flex items-center gap-2">
-                    <img src="src/assets/userMod.svg" alt="user" className="w-[30px] h-[30px]" />
-                    <p className="text-xl text-[#cbdefc88] font-bold">
-                        {modifiedBy}
-                    </p>
-                </div>
                 )}
-                <div className="w-full flex items-center gap-2">
-                    <img src="src/assets/code.svg" alt="user" className="w-[30px] h-[30px]" />
-                    <p className="text-xl text-[#cbdefc88] font-bold">
-                        {plataform}
-                    </p>
-                </div>
-                <div className="w-full flex items-center gap-2">
-                    <img src="src/assets/notebook.svg" alt="user" className="w-[30px] h-[30px]" />
-                    <p className="text-xl text-[#cbdefc88] font-bold">
-                        {subject}
-                    </p>
-                </div>
-                <div className="w-full flex items-center gap-2">
-                    <img src="src/assets/stopwatch.svg" alt="user" className="w-[30px] h-[30px]" />
-                    <p className="text-xl text-[#cbdefc88] font-bold">
-                        {expectedTime}
-                    </p>
-                </div>
             </div>
-            
-        </a>
+
+            <div className="rounded-2xl flex-1 flex justify-center items-center">
+                <img
+                    src={disabled ? DisabledIcon : (image ?? ICLogo)}
+                    alt={disabled ? "Laboratório em construção" : title}
+                    className="w-48 object-cover rounded-lg"
+                />
+            </div>
+
+            <div className="w-full flex flex-col gap-2">
+                {subject && (
+                    <InfoRow icon={<InfoIcon src={NotebookIcon} alt="Assunto" />}>
+                        {subject}
+                    </InfoRow>
+                )}
+                {createdBy && (
+                    <InfoRow icon={<InfoIcon src={UserIcon} alt="Criado por" />}>
+                        {createdBy}
+                    </InfoRow>
+                )}
+                {modifiedBy && (
+                    <InfoRow icon={<InfoIcon src={UserModIcon} alt="Padronizado por" />}>
+                        {modifiedBy}
+                    </InfoRow>
+                )}
+                {plataform && (
+                    <InfoRow icon={<InfoIcon src={CodeIcon} alt="Plataforma" />}>
+                        {plataform}
+                    </InfoRow>
+                )}
+                {expectedTime && (
+                    <InfoRow icon={<InfoIcon src={StopwatchIcon} alt="Duração estimada" />}>
+                        {expectedTime}
+                    </InfoRow>
+                )}
+            </div>
+
+            <div className="w-full flex flex-wrap justify-center gap-3 pt-2">
+                {disabled ? (
+                    <span className="text-gray-400 text-lg font-semibold py-2">
+                        Laboratório Indisponível
+                    </span>
+                ) : (
+                    <>
+                        {link && (
+                            <a
+                                href={link}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="flex items-center gap-2 px-4 py-2 rounded-md bg-white/10 text-white font-semibold hover:bg-white/20 transition-colors"
+                            >
+                                <ExternalLink size={18} />
+                                Abrir no Colab
+                            </a>
+                        )}
+                        {docsLink && (
+                            <a
+                                href={docsLink}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="flex items-center gap-2 px-4 py-2 rounded-md border border-white/30 text-white font-semibold hover:bg-white/10 transition-colors"
+                            >
+                                <FileText size={18} />
+                                Ver roteiro
+                            </a>
+                        )}
+                    </>
+                )}
+            </div>
+        </div>
     );
 };
 

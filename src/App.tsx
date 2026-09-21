@@ -51,7 +51,7 @@ export default function App() {
                 Laboratórios Práticos
               </h2>
               <p className="text-slate-600 text-lg leading-relaxed">
-                Nesta seção estão listados os laboratórios desenvolvidos durante o semestre, com a participação dos monitores João Victor Borges, Kauã Melo, Yuri Castro e Thiago Ferraço, além de laboratórios previamente criados por professores que contribuíram para o material, como os professores Laura Moraes e João Paixão.
+                Nesta seção estão listados os laboratórios desenvolvidos ao longo dos três períodos, com a participação dos monitores João Victor Borges, Kauã Melo, Yuri Castro e Thiago Ferraco, além de laboratórios previamente criados por professores que contribuíram para o material, como os professores Laura Moraes e João Paixão.
               </p>
             </div>
             
